@@ -16,6 +16,38 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
+    path: '/tv/latest',
+    name: 'Latest',
+    component: () => import(/* webpackChunkName: "about" */ '../views/tv/Latest.vue')
+  },
+  {
+    path: '/tv/upcoming',
+    name: 'Upcoming',
+    component: () => import(/* webpackChunkName: "about" */ '../views/tv/Upcoming.vue')
+  },
+  {
+    path: '/tv/top_rated',
+    name: 'Toprated',
+    component: () => import(/* webpackChunkName: "about" */ '../views/tv/Top_rated.vue')
+  },
+  {
+    path: '/tv/on_the_air',
+    name: 'OnAir',
+    component: () => import(/* webpackChunkName: "about" */ '../views/tv/Playing.vue')
+  },
+  {
+    path: '/tv/popular',
+    name: 'Popular',
+    component: () => import('../views/movie/Popular.vue')
+  },
+
+   //  TV SHOWS
+  {
+    path: '/latest',
+    name: 'Latest',
+    component: () => import(/* webpackChunkName: "about" */ '../views/movie/Latest.vue')
+  },
+  {
     path: '/upcoming',
     name: 'Upcoming',
     component: () => import(/* webpackChunkName: "about" */ '../views/movie/Upcoming.vue')

@@ -11,7 +11,7 @@
 <script>
 	import axios from 'axios'
 export default {
-  name: 'Popular',
+  name: 'Upcoming',
   data() {
 
   	return {
@@ -21,14 +21,14 @@ export default {
   },
   created() {
      if (!this.movies.length) {
-            this.getPopularMovies();
+            this.getUpcomingMovies();
         } 
   },
   methods: {
 
-  	getPopularMovies(){
+  	getUpcomingMovies(){
 
-	  	axios.get('/movie/popular?api_key=' + process.env.VUE_APP_API_TOKEN)
+	  	axios.get('/movie/upcoming?api_key=' + process.env.VUE_APP_API_TOKEN)
 	  	.then(response => {
 	  		console.log(response.data.results);
 	  		this.movies = response.data.results;

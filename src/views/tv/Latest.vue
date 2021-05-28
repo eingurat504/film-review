@@ -11,7 +11,7 @@
 <script>
 	import axios from 'axios'
 export default {
-  name: 'Popular',
+  name: 'Latest',
   data() {
 
   	return {
@@ -21,17 +21,17 @@ export default {
   },
   created() {
      if (!this.movies.length) {
-            this.getPopularMovies();
+            this.getLatestMovies();
         } 
   },
   methods: {
 
-  	getPopularMovies(){
+  	getLatestMovies(){
 
-	  	axios.get('/movie/popular?api_key=' + process.env.VUE_APP_API_TOKEN)
+	  	axios.get('/tv/latest?api_key=' + process.env.VUE_APP_API_TOKEN)
 	  	.then(response => {
-	  		console.log(response.data.results);
-	  		this.movies = response.data.results;
+	  		console.log(response.data);
+	  		this.movies = response.data;
 	  		// movies: response.data.results
 	  	}).catch(error => {
 	  		console.log(error);
