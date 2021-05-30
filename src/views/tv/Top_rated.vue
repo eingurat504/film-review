@@ -28,7 +28,7 @@ export default {
 
   	getTopratedMovies(){
 
-	  	axios.get('/movie/top_rated?api_key=' + process.env.VUE_APP_API_TOKEN)
+	  	axios.get('/tv/top_rated?api_key=' + process.env.VUE_APP_API_TOKEN)
 	  	.then(response => {
 	  		console.log(response.data.results);
 	  		this.movies = response.data.results;

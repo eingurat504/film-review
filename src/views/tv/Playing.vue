@@ -28,7 +28,7 @@ export default {
 
   	getNowPlayingMovies(){
 
-	  	axios.get('/movie/now_playing?api_key=' + process.env.VUE_APP_API_TOKEN)
+	  	axios.get('/tv/now_playing?api_key=' + process.env.VUE_APP_API_TOKEN)
 	  	.then(response => {
 	  		console.log(response.data.results);
 	  		this.movies = response.data.results;

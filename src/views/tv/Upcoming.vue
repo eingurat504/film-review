@@ -28,7 +28,7 @@ export default {
 
   	getUpcomingMovies(){
 
-	  	axios.get('/movie/upcoming?api_key=' + process.env.VUE_APP_API_TOKEN)
+	  	axios.get('/tv/upcoming?api_key=' + process.env.VUE_APP_API_TOKEN)
 	  	.then(response => {
 	  		console.log(response.data.results);
 	  		this.movies = response.data.results;
